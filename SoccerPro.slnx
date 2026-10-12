@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SoccerPro.Api/SoccerPro.Api.csproj" />
+    <Project Path="src/SoccerPro.Application/SoccerPro.Application.csproj" />
+    <Project Path="src/SoccerPro.Domain/SoccerPro.Domain.csproj" />
+    <Project Path="src/SoccerPro.Infrastructure/SoccerPro.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SoccerPro.Tests/SoccerPro.Tests.csproj" />
+  </Folder>
+</Solution>

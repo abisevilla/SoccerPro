@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#f8fafc"/>
+  <text x="800" y="66" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#0f172a">SoccerPro · Clean Architecture</text>
+  <text x="800" y="100" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#64748b">Dependencias dirigidas hacia el dominio y reglas de negocio</text>
+
+  <circle cx="800" cy="535" r="425" fill="#dff6ff" stroke="#22a6d5" stroke-width="3" filter="url(#shadow)"/>
+  <circle cx="800" cy="535" r="305" fill="#d9d3ff" stroke="#8174dc" stroke-width="3"/>
+  <circle cx="800" cy="535" r="192" fill="#ffc1d7" stroke="#eb6d99" stroke-width="3"/>
+  <circle cx="800" cy="535" r="105" fill="#ffe8b2" stroke="#d99c37" stroke-width="3"/>
+
+  <text x="800" y="505" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#8a5d16">DOMAIN</text>
+  <text x="800" y="535" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#7c5a20">Entities · Rules</text>
+  <text x="800" y="559" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" fill="#7c5a20">Team · Player · Match</text>
+
+  <text x="800" y="374" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#6356b9">APPLICATION</text>
+  <text x="800" y="404" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#554aa3">Use Cases &amp; Contracts</text>
+  <text x="800" y="697" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#be4e7b">API ADAPTERS</text>
+  <text x="800" y="727" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#9f4168">Controllers · JWT · Middleware</text>
+
+  <text x="800" y="148" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#087ea7">INFRASTRUCTURE &amp; FRAMEWORKS</text>
+  <text x="800" y="177" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#176b86">ASP.NET Core · EF Core · Dapper · SQLite</text>
+
+  <g font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#334155">
+    <rect x="92" y="188" width="260" height="132" rx="14" fill="#fff" stroke="#22a6d5" stroke-width="2"/>
+    <text x="222" y="219" text-anchor="middle" font-weight="700" fill="#087ea7">DRIVERS / EXTERNAL</text>
+    <text x="116" y="250">• HTTP clients / Postman</text><text x="116" y="277">• Swagger / OpenAPI</text><text x="116" y="304">• Bearer JWT</text>
+
+    <rect x="1248" y="188" width="260" height="132" rx="14" fill="#fff" stroke="#22a6d5" stroke-width="2"/>
+    <text x="1378" y="219" text-anchor="middle" font-weight="700" fill="#087ea7">PERSISTENCE</text>
+    <text x="1272" y="250">• SQLite in-memory</text><text x="1272" y="277">• EF repositories / UoW</text><text x="1272" y="304">• Dapper queries</text>
+
+    <rect x="92" y="790" width="315" height="128" rx="14" fill="#fff" stroke="#8174dc" stroke-width="2"/>
+    <text x="250" y="821" text-anchor="middle" font-weight="700" fill="#6356b9">APPLICATION</text>
+    <text x="116" y="852">• TeamService · PlayerService</text><text x="116" y="879">• MatchService · Query contracts</text><text x="116" y="906">• Repository abstractions</text>
+
+    <rect x="1193" y="790" width="315" height="128" rx="14" fill="#fff" stroke="#eb6d99" stroke-width="2"/>
+    <text x="1350" y="821" text-anchor="middle" font-weight="700" fill="#be4e7b">API / PRESENTATION</text>
+    <text x="1217" y="852">• Teams · Players · Matches</text><text x="1217" y="879">• Standings · Health · Auth</text><text x="1217" y="906">• Logging / errors / idempotency</text>
+  </g>
+
+  <g fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#arrow)">
+    <path d="M352 254 C490 258 520 300 604 370"/>
+    <path d="M1248 254 C1115 260 1070 315 1000 382"/>
+    <path d="M407 855 C515 820 570 770 635 700"/>
+    <path d="M1193 855 C1080 815 1030 770 965 700"/>
+  </g>
+
+  <g font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="600" fill="#475569">
+    <text x="462" y="292" transform="rotate(18 462 292)">adapters depend on application</text>
+    <text x="1084" y="292" transform="rotate(-18 1084 292)">infrastructure implements ports</text>
+    <text x="520" y="818" transform="rotate(-25 520 818)">use cases use domain</text>
+    <text x="1085" y="818" transform="rotate(25 1085 818)">controllers invoke use cases</text>
+  </g>
+
+  <path d="M800 882 L800 945" stroke="#475569" stroke-width="2" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+  <text x="800" y="975" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#64748b">La regla central: Domain no depende de ninguna capa externa</text>
+</svg>
