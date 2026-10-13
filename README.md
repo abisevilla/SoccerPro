@@ -88,7 +88,7 @@ Todos los endpoints requieren un token JWT, excepto `POST /api/auth/token`. Usa 
 POST /api/auth/token
 Content-Type: application/json
 
-{"username":"admin","password":"ChangeThisPassword!2026"}
+{"username":"<configured-user>","password":"<configured-password>"}
 ```
 
 Envía el valor de `accessToken` como `Authorization: Bearer {accessToken}` en las solicitudes posteriores. En producción, reemplaza la llave y credenciales mediante secretos de configuración.
