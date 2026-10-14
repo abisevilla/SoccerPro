@@ -2,10 +2,11 @@
   <ItemGroup><ProjectReference Include="../SoccerPro.Application/SoccerPro.Application.csproj" /><ProjectReference Include="../SoccerPro.Infrastructure/SoccerPro.Infrastructure.csproj" /></ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.24.1-preview.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
     <PackageReference Include="Serilog.Settings.Configuration" Version="9.0.0" />
     <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
   </ItemGroup>
-  <PropertyGroup><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><UserSecretsId>e12643d6-74cb-423d-94fb-c36c45da9876</UserSecretsId><DockerDefaultTargetOS>Linux</DockerDefaultTargetOS><DockerfileContext>..\..</DockerfileContext></PropertyGroup>
 </Project>

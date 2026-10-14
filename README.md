@@ -2,27 +2,7 @@
 
 API REST de torneo de fútbol construida con .NET 10, Clean Architecture y CQRS.
 
-```mermaid
-flowchart LR
-  Frontend[Frontend desacoplado] --> Controllers[API Controllers]
-  Controllers --> Commands[Commands / Application Services]
-  Controllers --> Queries[Queries / ISoccerQueryService]
-  Commands --> Repositories[Write Repositories]
-  Repositories --> EF[EF Core]
-  EF --> Uow[UnitOfWork / Transactions]
-  Queries --> Dapper[Dapper]
-  Dapper --> Db[(SQLite in-memory)]
-  EF --> Db
-  Idem[Idempotency Middleware] --> IdemStore[Idempotency Store]
-  IdemStore --> Uow
-  IdemStore --> Db
-  Controllers --> Domain[Domain]
-  Commands --> Events[Application event logger]
-  Trace[CorrelationId / TraceId / Request logging] --> Serilog[Serilog Console]
-  Serilog --> Controllers
-  Docker[Docker] --> Api[SoccerPro.Api]
-  Api --> Controllers
-```
+![Arquitectura limpia de SoccerPro](docs/soccerpro-clean-architecture.svg)
 
 ### Autenticación
 
