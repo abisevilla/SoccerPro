@@ -4,6 +4,17 @@ API REST de torneo de fútbol construida con .NET 10, Clean Architecture y CQRS.
 
 ![Arquitectura limpia de SoccerPro](docs/soccerpro-clean-architecture.svg)
 
+## Casos de uso
+
+Segun el contexto de SoccerPro, los casos de uso principales son:
+
+- Autenticar usuarios mediante un token JWT.
+- Crear, consultar, actualizar y eliminar equipos.
+- Crear, consultar, actualizar y eliminar jugadores asociados a un equipo.
+- Programar, consultar, actualizar y eliminar partidos.
+- Registrar el resultado de un partido.
+- Consultar la tabla de posiciones, calculando partidos jugados, victorias, empates, derrotas, goles y puntos.
+
 ### Autenticación
 
 ## Estructura de la base de datos
